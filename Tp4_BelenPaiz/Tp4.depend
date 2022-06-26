@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1656177637 source:d:\usuarios\belen\documentos\programacion1\tp4\linkedlist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Linkedlist.h"
+
+1656177637 d:\usuarios\belen\documentos\programacion1\tp4\linkedlist.h
+
+1656209971 source:d:\usuarios\belen\documentos\programacion1\tp4\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Linkedlist.h"
+	"empleados.h"
+
+1656205688 source:d:\usuarios\belen\documentos\programacion1\tp4\empleados.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"empleados.h"
+
+1656205688 d:\usuarios\belen\documentos\programacion1\tp4\empleados.h
+
