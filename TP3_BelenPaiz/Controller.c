@@ -257,7 +257,7 @@ int controller_editPassenger(LinkedList* pArrayListPassenger, eTipo tipos[], int
             if(auxPasajero != NULL)
             {
                 printf("********PASAJERO A MODIFICAR********\n\n");
-                printf(" ID                    NOMBRE                  APELLIDO            PRECIO           TIPO DE PASAJERO             CODIGO DE VUELO         ESTADO DEL VUELO\n");
+                printf(" ID                    NOMBRE                  APELLIDO            PRECIO           CODIGO DE VUELO             TIPO DE PASAJERO         ESTADO DEL VUELO\n");
                 Passenger_printOne(auxPasajero, tipos, tam, vuelos, tamV);
                 switch(controller_menuEditPassenger())
                 {
