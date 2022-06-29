@@ -82,7 +82,7 @@ int pidoValidoNumero(int* pNumero, char mensaje[])
         printf("Ingrese %s: ", mensaje);
         fflush(stdin);
         fgets(buffNum, 100, stdin);
-        while(validarNumero(buffNum) == 0)
+        while(validarNumero(buffNum) == 0 || stricmp(buffNum , "\n") == 0)
         {
             printf("Ingreso invalido. \nReingrese %s: ", mensaje);
             fflush(stdin);
@@ -108,7 +108,7 @@ int pidoValidoNumeroRango(int* pNumero, char mensaje[], int minimo, int maximo)
         printf("Ingrese %s: ", mensaje);
         fflush(stdin);
         fgets(buffNum, 100, stdin);
-        while(validarNumero(buffNum) == 0)
+        while(validarNumero(buffNum) == 0 || stricmp(buffNum , "\n") == 0)
         {
             printf("Ingreso invalido. \nReingrese %s: ", mensaje);
             fflush(stdin);

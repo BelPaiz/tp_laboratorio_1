@@ -62,7 +62,7 @@ void controller_confirmarSalida(char* x, int flagS)
 int controller_loadFromText(char* path, LinkedList* pArrayListPassenger, int* pNextId, eTipo tipos[], int tam, eVuelo vuelos[], int tamV, int* flag)
 {
     int todoOk = 0;
-    if(path != NULL && pArrayListPassenger != NULL)
+    if(path != NULL && pArrayListPassenger != NULL && *flag == 1)
     {
         FILE* f = fopen(path, "r");
 
@@ -81,6 +81,10 @@ int controller_loadFromText(char* path, LinkedList* pArrayListPassenger, int* pN
         todoOk = 1;
 
     }
+    else
+    {
+    	printf("ERROR!! La lista de pasajeros ya fue cargada!\n");
+    }
     return todoOk;
 }
 
@@ -94,7 +98,7 @@ int controller_loadFromText(char* path, LinkedList* pArrayListPassenger, int* pN
 int controller_loadFromBinary(char* path, LinkedList* pArrayListPassenger, int* pNextId, eTipo tipos[], int tam, eVuelo vuelos[], int tamV, int* flag)
 {
     int todoOk = 0;
-    if(path != NULL && pArrayListPassenger != NULL)
+    if(path != NULL && pArrayListPassenger != NULL && *flag == 1)
     {
         FILE* f = fopen(path, "rb");
 
@@ -112,7 +116,11 @@ int controller_loadFromBinary(char* path, LinkedList* pArrayListPassenger, int* 
         *flag = 0;
         todoOk = 1;
     }
-return todoOk;
+    else
+        {
+        	printf("ERROR!! La lista de pasajeros ya fue cargada!\n");
+        }
+    return todoOk;
 }
 
 /** \brief permite levantar de un texto el ultimo id utilizado
